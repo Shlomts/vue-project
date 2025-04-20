@@ -63,7 +63,7 @@ async function getMoviePoster(title) {
     if (data.Response === 'True') {
         return data.Poster
     } else {
-        return '../../default.png'
+        return '/default.png'
     }
 }
 
