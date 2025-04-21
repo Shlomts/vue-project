@@ -44,13 +44,13 @@ async function save(movie) {
 
 function getEmptyMovie() {
 	return {
-		title: '', // Movie title
-		director: '', // Director's name
-		posterUrl: '', // URL to the movie poster image
-		runningTime: 90, // Running time in minutes
-		releaseYear: 1999, // Year of release
-		actors: [], // Array of actor names
-		genre: '', // Genre of the movie
+		title: '',
+		director: '',
+		posterUrl: '', 
+		runningTime: 90,
+		releaseYear: 1999,
+		actors: [], 
+		genre: '', 
 	}
 }
 
@@ -63,7 +63,7 @@ async function getMoviePoster(title) {
     if (data.Response === 'True') {
         return data.Poster
     } else {
-        return '/default.png'
+        return '../../default.png'
     }
 }
 

@@ -1,6 +1,10 @@
 <template>
 	<div v-if="movie" class="movie-details">
-		<img :src="movie.posterUrl" alt="movie poster" />
+		<img
+			:src="movie.posterUrl"
+			alt="movie poster"
+			onerror="this.src='../../default.png'"
+		/>
 		<h2>{{ movie.title }}</h2>
 		<p>{{ movie.director }}</p>
 		<p>{{ movie.releaseYear }}</p>

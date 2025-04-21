@@ -1,6 +1,10 @@
 <template>
 	<article class="movie-preview">
-		<img :src="posterUrl" alt="movie poster" />
+		<img
+			:src="movie.posterUrl"
+			alt="movie poster"
+			onerror="this.src='../../default.png'"
+		/>
 		<h3>{{ movie.title }}</h3>
 		<p>{{ movie.releaseYear }}</p>
 	</article>
@@ -13,26 +17,6 @@ export default {
 			type: Object,
 			required: true,
 		},
-	},
-	data() {
-		return {
-			posterUrl: '',
-		}
-	},
-	async mounted() {
-		if (!this.movie.posterUrl) {
-			this.posterUrl = '/default.png'
-			return
-		}
-
-		try {
-			const res = await fetch(this.movie.posterUrl)
-			if (!res.ok) this.posterUrl = '/default.png'
-			else this.posterUrl = this.movie.posterUrl
-		} catch (err) {
-			console.error(err)
-			this.posterUrl = '/default.png'
-		}
 	},
 }
 </script>

@@ -1,8 +1,12 @@
 <template>
 	<form @submit.prevent="onSave" v-if="movie" class="movie-edit">
-		<input v-model="movie.title" type="text" placeholder="Title" />
-		<input v-model="movie.director" type="text" placeholder="Director" />
-		<input v-model="movie.posterUrl" type="text" placeholder="Poster Url" />
+		<input v-model="movie.title" type="text" placeholder="Title" required />
+		<input
+			v-model="movie.director"
+			type="text"
+			placeholder="Director"
+			required
+		/>
 		<input
 			v-model="movie.runningTime"
 			type="number"
