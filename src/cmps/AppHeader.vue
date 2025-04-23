@@ -9,23 +9,21 @@
 	</header>
 </template>
 
-<script>
-export default {}
-</script>
+<script></script>
 
 <style lang="scss">
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 5vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 5vh;
 
-    padding: 10px;
-    background-color: lightblue;
+	padding: 10px;
+	background-color: lightblue;
 
-    nav {
-        display: flex;
-        gap: 1em;
-    }
+	nav {
+		display: flex;
+		gap: 1em;
+	}
 }
 </style>

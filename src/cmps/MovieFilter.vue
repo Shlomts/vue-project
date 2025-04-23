@@ -2,7 +2,7 @@
 	<input @input="onSetFilter" v-model="filterBy.txt" placeholder="Search" />
 
 	<label>
-		Max Runtime: {{ filterBy.maxRuntime }} min
+		Max Run Time: {{ filterBy.maxRuntime }} min
 		<input
 			type="range"
 			min="0"

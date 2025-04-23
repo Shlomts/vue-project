@@ -29,12 +29,12 @@ async function query(filterBy = {}) {
 	return movies
 }
 
-async function get(movieId) {
-	return storageService.get(KEY, movieId)
+async function get(id) {
+	return storageService.get(KEY, id)
 }
 
-async function remove(movieId) {
-	return storageService.remove(KEY, movieId)
+async function remove(id) {
+	return storageService.remove(KEY, id)
 }
 
 async function save(movie) {

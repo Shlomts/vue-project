@@ -46,7 +46,7 @@ export default {
 		async onSave() {
 			this.movie.actors.length > 0
 				? (this.movie.actors = this.movie.actors.split(','))
-				: []
+				: this.movie.actors = []
 			await movieService.save(this.movie)
 			this.$router.push('/movie')
 		},
