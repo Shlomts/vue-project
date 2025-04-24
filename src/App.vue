@@ -22,7 +22,7 @@
 
 <style scoped>
 main {
-    min-height: calc(90vh - 1rem);
+    min-height: calc(87vh - 1rem);
     padding: .5em;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <header>
         <MovieFilter @filter="onFilter" />
-        <RouterLink to="/movie/edit"><button>Add a Movie</button></RouterLink>
+        <RouterLink to="/movie/edit" class="app-btn">Add a Movie</RouterLink>
     </header>
 	<MovieList @remove="removeMovie" v-if="movies" :movies="movies" />
     <h2 v-else>Loading...</h2>

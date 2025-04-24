@@ -1,9 +1,27 @@
+body {
+	background-color: antiquewhite;
+}
+
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  font-weight: normal;
+	max-width: 1280px;
+	margin: 0 auto;
+	font-weight: normal;
 }
 
 .router-link-active {
-    color: white;
+	color: white;
+}
+
+a {
+	color: rgb(255, 127, 127);
+}
+
+.app-btn {
+	background-color: rgb(255, 127, 127);
+	color: rgb(167, 0, 0);
+	font-weight: 500;
+	border-radius: 5px;
+	border: transparent;
+	padding: 5px 8px;
+	cursor: pointer;
 }

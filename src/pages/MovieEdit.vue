@@ -25,10 +25,10 @@
 		/>
 
 		<div class="actions">
-			<RouterLink to="/movie"
-				><button type="button">Cancel</button></RouterLink
+			<RouterLink to="/movie" class="app-btn" type="button"
+				>Cancel</RouterLink
 			>
-			<button>Save</button>
+			<button class="app-btn">Save</button>
 		</div>
 	</form>
 </template>
@@ -44,9 +44,9 @@ export default {
 	},
 	methods: {
 		async onSave() {
-			this.movie.actors.length > 0
-				? (this.movie.actors = this.movie.actors.split(','))
-				: this.movie.actors = []
+			if (typeof this.movie.actors === 'string') {
+				this.movie.actors = this.movie.actors.split(',')
+			}
 			await movieService.save(this.movie)
 			this.$router.push('/movie')
 		},
@@ -65,17 +65,27 @@ export default {
 
 <style lang="scss">
 .movie-edit {
-	display: grid;
-	justify-items: start;
-	gap: 0.3rem;
+	justify-self: center;
+	padding: 12px;
+	background-color: rgb(251, 174, 185);
+	min-height: 40vw;
+	margin-block: 8px;
 
-	padding: 10px;
-	background-color: rgb(254, 211, 130);
+	input {
+		display: block;
+		padding-block: 4px;
+		margin-block: 9px;
+		min-width: 50vw;
+		background-color: transparent;
+		border: 1px dotted;
+	}
 
 	.actions {
 		display: flex;
 		gap: 0.3rem;
 		justify-self: end;
+		position: relative;
+		bottom: -60px;
 	}
 }
 </style>

@@ -16,10 +16,11 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 5vh;
+	height: 8vh;
 
 	padding: 10px;
-	background-color: lightblue;
+	background-color: rgb(167, 0, 0);
+	color: rgb(245, 166, 166);
 
 	nav {
 		display: flex;

@@ -5,8 +5,10 @@
 			alt="movie poster"
 			onerror="this.src='../../default.png'"
 		/>
-		<h3>{{ movie.title }}</h3>
-		<p>{{ movie.releaseYear }}</p>
+		<section class="details">
+			<h3>{{ movie.title }}</h3>
+			<p>{{ movie.releaseYear }}</p>
+		</section>
 	</article>
 </template>
 
@@ -23,13 +25,26 @@ export default {
 
 <style lang="scss">
 .movie-preview {
+	display: grid;
+	grid-template-columns: 1fr min-content;
+	min-height: 24vh;
+
 	img {
-		max-height: 60px;
+		max-height: 70px;
+		display: flex;
+		justify-self: end;
+		grid-column: 2;
 	}
 
-	h3 {
-		font-size: 1.5rem;
-		font-weight: bold;
+	.details {
+		grid-column: 1;
+		grid-row: 1;
+
+		h3 {
+			font-size: 1.5rem;
+			font-weight: bold;
+			text-transform: capitalize;
+		}
 	}
 }
 </style>

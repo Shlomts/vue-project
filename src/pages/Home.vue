@@ -1,10 +1,15 @@
 <template>
-	<h1>Hi! I'm a static home page. So boring...</h1>
-	<h2>{{ counter }}</h2>
-	<button @click="onIncrement">+ 1</button>
-	<button @click="onIncrementBy(10)">+ 10</button>
-	<button @click="onIncrementLater">+ Later</button>
-	<button @click="onIncrementLaterBy(10)">+ 10 Later</button>
+	<h1>Hi! I'm a static home page!</h1>
+	<h3>I usd to be boring, but now I got a counter!</h3>
+	<h2 class="counter">{{ counter }}</h2>
+	<section class="actions">
+		<button class="app-btn" @click="onIncrement">+ 1</button>
+		<button class="app-btn" @click="onIncrementBy(10)">+ 10</button>
+		<button class="app-btn" @click="onIncrementLater">+ Later</button>
+		<button class="app-btn" @click="onIncrementLaterBy(10)">
+			+ 10 Later
+		</button>
+	</section>
 </template>
 
 <script>
@@ -30,3 +35,16 @@ export default {
 	},
 }
 </script>
+
+<style lang="scss" scoped>
+.counter {
+	display: block;
+	justify-self: anchor-center;
+	padding-block: 10px;
+}
+.actions {
+	display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+</style>
